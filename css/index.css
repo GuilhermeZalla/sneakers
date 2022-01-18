@@ -1,0 +1,1347 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Poppins:ital,wght@0,200;0,400;0,500;0,700;0,800;1,200&family=Roboto:wght@100;300&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/**************/
+
+
+/* 0. Variáveis
+/* 1. Gerais
+/* 2. Container
+/* 3. Header
+/* 4. Main
+/* 5. Slider
+/* 6. Certifieds
+/* 7. Trending Products
+/* 8. Advertising
+/* 9. Product Category
+/* 10. Banner
+/* 11. News
+/* 12. Brands Banner
+/* 13. Aside
+/* 14. Footer
+
+/**************/
+
+
+/* 0. Variáveis
+/**************/
+
+:root {
+    --primary: hsl(26, 100%, 55%);
+    --secondary: hsl(25, 100%, 94%);
+    --clr-neutral-0: hsl(220, 13%, 13%);
+    --clr-neutral-1: hsl(219, 9%, 45%);
+    --clr-neutral-2: hsl(220, 14%, 75%);
+    --clr-neutral-3: hsl(223, 64%, 98%);
+    --clr-neutral-4: hsl(0, 0%, 0%);
+    --clr-neutral-5: rgba(212, 205, 205, 0.451);
+    --clr-neutral-6: hsl(26, 100%, 55%);
+    --clr-neutral-7: hsl(208, 56%, 46%);
+    --clr-neutral-8: hsla(0, 1%, 14%, 0.801);
+    --main-background: rgb(229, 229, 229);
+    --clr-score: hsl(48, 100%, 53%);
+    --font-main-title: 'Poppins', sans-serif;
+    --font-post-text: 'Roboto', sans-serif;
+    --modal-start: 0%;
+    --modal-end: 8%;
+}
+
+
+/**************/
+
+
+/*1. Gerais
+/**************/
+
+body {
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: 1px solid var(--clr-neutral-5);
+    padding: 3px 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    transition-duration: .5s;
+    background-color: var(--primary);
+    color: var(--clr-neutral-3);
+}
+
+
+/**************/
+
+
+/*2. Container
+/**************/
+
+.sneakers__container,
+.sneakers__aside {
+    padding: 20px 100px;
+}
+
+.men__hidden-menu .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.women__hidden-menu .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    width: 75%;
+}
+
+.sneakers__certifieds,
+.newsletter__container {
+    display: flex;
+    justify-content: center;
+}
+
+.trending,
+.sneakers__slider,
+.sneakers-aside__header,
+.sneakers-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trending__products {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    width: 550px;
+    height: 500px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.advertising,
+.banners {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advertising {
+    height: 500px;
+}
+
+.products-category__catalog {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: auto;
+    gap: 35px;
+}
+
+.banners {
+    margin-top: 3rem;
+}
+
+.news__body {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: auto;
+    gap: 30px;
+}
+
+.brands-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1801px) {
+    .sneakers__container,
+    .sneakers__aside {
+        padding-left: 390px;
+        padding-right: 390px;
+    }
+    .news__body {
+        gap: 15px;
+    }
+}
+
+
+/**************/
+
+
+/* Header
+/**************/
+
+.sneakers__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid hsla(220, 14%, 75%, 0.507);
+    padding: 10px 0 20px 0;
+    position: relative;
+}
+
+.sneakers__header .sneakers__item {
+    display: inline-block;
+}
+
+.sneakers__header .sneakers__item+.sneakers__item a:hover {
+    color: var(--clr-neutral-6);
+}
+
+.sneakers__header>.sneakers__list .sneakers__item:first-child {
+    margin-right: 3rem;
+}
+
+.sneakers__header>.sneakers__list .sneakers__item {
+    margin: 0 1rem;
+}
+
+.sneakers__header a {
+    color: var(--clr-neutral-0);
+}
+
+.sneakers__list-user>.sneakers__item {
+    margin-right: 1.6rem;
+    vertical-align: middle;
+}
+
+.sneakers__header .sneakers__list-user img {
+    width: 48px;
+}
+
+.is-active {
+    color: var(--clr-neutral-6);
+}
+
+
+/* Hidden Menus */
+
+.men__hidden-menu,
+.women__hidden-menu {
+    background-color: var(--clr-neutral-3);
+    border: 1px solid var(--clr-neutral-2);
+    border-top: 2px solid var(--clr-neutral-6);
+    box-shadow: 0px 1px 6px 1px #787a7a6e;
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    z-index: 10;
+    padding: 30px;
+    display: none;
+}
+
+.men__hidden-menu ul {
+    width: 200px;
+}
+
+.men__hidden-menu ul li:first-child,
+.women__hidden-menu ul li:first-child {
+    font-weight: bold;
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.342);
+    margin-bottom: .80rem;
+    padding-bottom: 5px;
+}
+
+.men__hidden-menu ul li,
+.women__hidden-menu ul li {
+    font-size: .90rem;
+    line-height: .7cm;
+}
+
+.men__hidden-menu a:hover,
+.women__hidden-menu a:hover {
+    color: var(--clr-neutral-6);
+}
+
+.men__hidden-menu img {
+    text-align: center;
+    width: 49%;
+    margin-top: 1.6rem;
+}
+
+.women__hidden-menu img {
+    width: 19%;
+    position: absolute;
+    right: 2%;
+    top: 11%;
+}
+
+
+/**************/
+
+
+/* 4. Main
+
+/**************/
+
+.sneakers__main {
+    margin: 3.2rem 0;
+}
+
+.news-letter-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.newsletter__container {
+    margin: auto;
+    border: 1px solid hsla(0, 0%, 46%, 0.815);
+    width: 700px;
+    height: 380px;
+    animation: fadeIn ease-out .7s forwards 1 running;
+    -webkit-animation: fadeIn ease-out .7s forwards 1 running;
+    -moz-animation: fadeIn ease-out .7s forwards 1 running;
+    -o-animation: fadeIn ease-out .7s forwards 1 running;
+    -ms-animation: fadeIn ease-out .7s forwards 1 running;
+}
+
+@keyframes fadeIn {
+    from {
+        margin-top: var(--modal-start);
+        opacity: 0;
+    }
+    to {
+        margin-top: var(--modal-end);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        margin-top: var(--modal-start);
+        opacity: 0;
+    }
+    to {
+        margin-top: var(--modal-end);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        margin-top: var(--modal-start);
+        opacity: 0;
+    }
+    to {
+        margin-top: var(--modal-end);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    from {
+        margin-top: var(--modal-start);
+        opacity: 0;
+    }
+    to {
+        margin-top: var(--modal-end);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        margin-top: var(--modal-start);
+        opacity: 0;
+    }
+    to {
+        margin-top: var(--modal-end);
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut ease-out .3s backwards 1 running;
+    -webkit-animation: fadeOut ease-out .3s backwards 1 running;
+    -moz-animation: fadeOut ease-out .3s backwards 1 running;
+    -o-animation: fadeOut ease-out .3s backwards 1 running;
+    -ms-animation: fadeOut ease-out .3s backwards 1 running;
+}
+
+@keyframes fadeOut {
+    0% {
+        margin-top: var(--modal-end);
+        opacity: 1;
+    }
+    100% {
+        margin-top: var(--modal-start);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        margin-top: var(--modal-end);
+        opacity: 1;
+    }
+    100% {
+        margin-top: var(--modal-start);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fadeOut {
+    0% {
+        margin-top: var(--modal-end);
+        opacity: 1;
+    }
+    100% {
+        margin-top: var(--modal-start);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    0% {
+        margin-top: var(--modal-end);
+        opacity: 1;
+    }
+    100% {
+        margin-top: var(--modal-start);
+        opacity: 0;
+    }
+}
+
+.newsletter__container .newsletter__cover img {
+    height: 100%;
+}
+
+.newsletter {
+    padding: 50px 30px;
+    position: relative;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.newsletter i {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+}
+
+.newsletter i:hover {
+    color: var(--clr-neutral-6);
+}
+
+.newsletter .newsletter__title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.newsletter .newsletter__paragraph {
+    font-weight: 400;
+    color: var(--clr-neutral-8);
+    line-height: .7cm;
+}
+
+.newsletter .email {
+    border: 1px solid rgba(126, 122, 122, 0.815);
+    padding: 18px;
+    margin: 25px 0;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.newsletter .email:focus {
+    outline: none;
+}
+
+.newsletter button {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background-color: var(--clr-neutral-4);
+    color: var(--clr-neutral-3);
+    font-weight: 600;
+}
+
+.newsletter button:hover {
+    background-color: hsla(0, 0%, 0%, 0.856);
+    transition: none;
+}
+
+.newsletter .checkbox {
+    vertical-align: middle;
+}
+
+.newsletter label {
+    vertical-align: middle;
+    color: rgba(126, 122, 122, 0.815);
+    font-size: .80rem;
+}
+
+
+/**************/
+
+
+/* 5. Slider
+
+/**************/
+
+.sneakers__page-cover {
+    background-color: var(--main-background);
+    width: 100%;
+    height: 460px;
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.sneakers__page-cover .fa-angle-left,
+.sneakers__page-cover .fa-angle-right {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 11;
+    background-color: hsla(0, 0%, 3%, 0.479);
+    color: var(--clr-neutral-3);
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+
+.sneakers__page-cover .fa-angle-left:hover,
+.sneakers__page-cover .fa-angle-right:hover {
+    background-color: var(--clr-neutral-6);
+    transition-duration: .1s;
+}
+
+.sneakers__page-cover .fa-angle-left {
+    left: 0;
+    animation: moveIt-left .2s forwards 1 running;
+    -webkit-animation: moveIt-left .2s forwards 1 running;
+    -moz-animation: moveIt-left .2s forwards 1 running;
+    -o-animation: moveIt-left .2s forwards 1 running;
+    -ms-animation: moveIt-left .2s forwards 1 running;
+}
+
+.sneakers__page-cover .fa-angle-right {
+    right: 0;
+    animation: moveIt-right .2s forwards 1 running;
+    -webkit-animation: moveIt-right .2s forwards 1 running;
+    -moz-animation: moveIt-right .2s forwards 1 running;
+    -o-animation: moveIt-right .2s forwards 1 running;
+    -ms-animation: moveIt-right .2s forwards 1 running;
+}
+
+.sneakers__page-cover:hover>a i {
+    display: block;
+}
+
+@keyframes moveIt-left {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 1.8%;
+    }
+}
+
+@-webkit-keyframes moveIt-left {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 1.8%;
+    }
+}
+
+@-moz-keyframes moveIt-left {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 1.8%;
+    }
+}
+
+@-o-keyframes moveIt-left {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 1.8%;
+    }
+}
+
+@keyframes moveIt-right {
+    from {
+        right: 0%;
+    }
+    to {
+        right: 1.8%;
+    }
+}
+
+@-webkit-keyframes moveIt-right {
+    from {
+        right: 0%;
+    }
+    to {
+        right: 1.8%;
+    }
+}
+
+@-moz-keyframes moveIt-right {
+    from {
+        right: 0%;
+    }
+    to {
+        right: 1.8%;
+    }
+}
+
+@-o-keyframes moveIt-right {
+    from {
+        right: 0%;
+    }
+    to {
+        right: 1.8%;
+    }
+}
+
+.sneakers__slider li {
+    margin: 0 35rem 0 5rem;
+    animation-name: slider;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes slider {
+    0% {
+        left: 0%;
+    }
+    20% {
+        left: 0%;
+    }
+    30% {
+        left: -100%;
+    }
+    40% {
+        left: -100%;
+    }
+    50% {
+        left: -100%;
+    }
+    60% {
+        left: 0%;
+    }
+    80% {
+        right: 0%;
+    }
+    90% {
+        right: 0%;
+    }
+    100% {
+        right: 0%;
+    }
+}
+
+.sneakers__slider-item {
+    position: relative;
+    margin-right: 30rem;
+}
+
+.sneakers__slider .sneakers__page-cover-title {
+    margin: 3rem 0;
+}
+
+.sneakers__slider .sneakers__page-cover-caption {
+    width: 500px;
+}
+
+.sneakers__slider .is-low-case {
+    font-size: .80rem;
+    font-weight: bold;
+}
+
+.sneakers__slider .is-high-title {
+    font-size: 4rem;
+    font-family: var(--font-main-title);
+    font-weight: 800;
+}
+
+.sneakers__slider .is-high-color {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.sneakers__slider .is-low-case-caption {
+    font-size: .90rem;
+}
+
+.sneakers__slider .sneakers__page-cover-link {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--clr-neutral-3);
+    background-color: var(--clr-neutral-4);
+    padding: 10px 20px;
+}
+
+.sneakers__slider .sneakers__page-cover-link:hover {
+    background-color: var(--primary);
+    transition-duration: .6s;
+}
+
+.sneakers__slider .sneakers__page-cover-img {
+    position: absolute;
+    top: 10%;
+    right: -100%;
+    width: 100%;
+}
+
+
+/**************/
+
+
+/* 6. Certfieds
+
+/**************/
+
+.sneakers__certifieds {
+    margin: 40px 0;
+}
+
+.sneakers__certifieds div {
+    background-color: var(--clr-neutral-5);
+    border: 1px solid rgba(212, 205, 205, 0.815);
+    padding: 20px 10px;
+    line-height: .6cm;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sneakers__certifieds div:hover,
+.sneakers__certifieds div:hover svg {
+    color: var(--clr-neutral-3);
+    fill: var(--clr-neutral-3);
+}
+
+.sneakers__certifieds div:first-child:hover {
+    background-color: var(--primary);
+}
+
+.sneakers__certifieds div:nth-last-child(2):hover {
+    background-color: rgb(213, 82, 94);
+}
+
+.sneakers__certifieds div:nth-last-child(1):hover {
+    background-color: var(--clr-neutral-0);
+}
+
+.sneakers__certifieds div>svg {
+    width: 52px;
+}
+
+.sneakers__certifieds .sneakers__certified-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.sneakers__certifieds .sneakers__certified-subtitle {
+    font-size: .90rem;
+    font-weight: normal;
+}
+
+
+/**************/
+
+
+/* 7. Trending Products
+/**************/
+
+.trending__box-left,
+.trending__box-right {
+    flex-basis: 30%;
+}
+
+.trending .trending__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid rgba(189, 185, 185, 0.644);
+}
+
+.trending .trending__title {
+    background-color: var(--clr-neutral-5);
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.418);
+    border-bottom-color: var(--clr-neutral-6);
+    border-bottom-width: 3px;
+    padding: 10px 15px;
+    font-weight: 800;
+}
+
+
+/* Trending Products Body */
+
+.card {
+    margin-top: 1.6rem;
+    width: 260px;
+    height: 435px;
+    border: 1px solid var(--clr-neutral-2);
+    text-align: center;
+    line-height: .8cm;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.card:hover {
+    border: 1px solid var(--primary);
+}
+
+.card__header {
+    position: relative;
+}
+
+.card__header h3,
+.card__header .wishlist,
+.card__header .compare {
+    display: none;
+}
+
+.card:hover .card__header h3 {
+    display: block;
+    border: 1px solid var(--clr-neutral-1);
+    background-color: var(--clr-neutral-3);
+    padding: 5px 0;
+    width: 120px;
+    font-family: var(--font-main-title);
+    font-size: .80rem;
+    font-weight: 400;
+    position: absolute;
+    left: 28%;
+    animation-name: fadeIn-quick-view;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.card:hover .card__header .wishlist,
+.card:hover .card__header .compare {
+    display: block;
+    border: 1px solid var(--clr-neutral-1);
+    background-color: var(--clr-neutral-3);
+    color: var(--clr-neutral-8);
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 34%;
+    animation-name: fadeIn-icon-left;
+    animation-duration: .7s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.card:hover .card__header .compare {
+    animation-name: fadeIn-icon-right;
+    left: 52%;
+}
+
+.card__header h3:hover,
+.card__header .wishlist:hover,
+.card__header .compare:hover {
+    border: none;
+    background-color: var(--clr-neutral-6);
+    color: var(--clr-neutral-3);
+    transition-duration: .5s;
+}
+
+@keyframes fadeIn-quick-view {
+    from {
+        top: 45%;
+        opacity: .7;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn-icon-left {
+    from {
+        top: 0%;
+        left: 30%;
+        opacity: .5;
+    }
+    to {
+        top: 33%;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn-icon-right {
+    from {
+        top: 0%;
+        right: 30%;
+        opacity: .5;
+    }
+    to {
+        top: 33%;
+        opacity: 1;
+    }
+}
+
+.card__header img {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.card__header span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--clr-neutral-3);
+    padding: 0 8px 0 15px;
+    font-size: .80rem;
+}
+
+.card__title {
+    font-size: 1.2rem;
+}
+
+.card__price {
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.card button {
+    border: 1px solid var(--clr-neutral-1);
+    font-size: .90rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: .80rem;
+}
+
+.card button:hover {
+    border: none;
+}
+
+.card del {
+    font-size: .95rem;
+    font-weight: 400;
+    color: var(--clr-neutral-1);
+}
+
+.is-sale {
+    background-color: var(--primary);
+}
+
+.is-new {
+    background-color: var(--clr-neutral-7);
+}
+
+
+/**************/
+
+
+/* 8. Advertising
+/**************/
+
+.advertising {
+    margin-bottom: 4rem;
+    height: 450px;
+}
+
+.advertising__middle>img {
+    display: block;
+    height: 150px;
+}
+
+
+/**************/
+
+
+/* 9. Product Category
+/**************/
+
+.products-category__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid rgba(189, 185, 185, 0.644);
+}
+
+.product-category__title {
+    background-color: var(--clr-neutral-5);
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.418);
+    border-bottom-color: var(--clr-neutral-6);
+    border-bottom-width: 3px;
+    padding: 10px 15px;
+    font-weight: 800;
+}
+
+.products-category__header li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.product-category__item a {
+    color: var(--clr-neutral-4);
+}
+
+.product-category__item:first-child a {
+    color: var(--clr-neutral-6);
+}
+
+
+/**************/
+
+
+/* 10. Banner
+/**************/
+
+.banners {
+    height: 230px;
+}
+
+
+/**************/
+
+
+/* 11. News
+/**************/
+
+.news {
+    margin-top: 3.2rem;
+}
+
+.news__header {
+    border-bottom: 3px solid rgba(189, 185, 185, 0.644);
+}
+
+.news__header>.news__title {
+    background-color: var(--clr-neutral-5);
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.418);
+    border-bottom-color: var(--clr-neutral-6);
+    border-bottom-width: 3px;
+    padding: 10px 15px;
+    font-weight: 800;
+}
+
+.news-card__box {
+    border: 1px solid var(--clr-neutral-2);
+    width: 363px;
+    height: 395px;
+    font-family: var(--font-post-text);
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.news__body>a {
+    width: 363px;
+    overflow: hidden;
+}
+
+.news__body>a img {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.news__body>a:hover img {
+    transform: scale(1.1);
+    transition-duration: .7s;
+    filter: brightness(90%);
+}
+
+.news-card__header>img {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.news-card__article {
+    padding: 20px;
+}
+
+.news-card__title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.news-card__title hr {
+    border-bottom: 1px solid var(--clr-neutral-2);
+    padding: 15px 0;
+}
+
+.news-card__article .news-card__paragraph {
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+.news-card__article a {
+    font-weight: bold;
+    color: var(--clr-neutral-4);
+}
+
+.news-card__article a:hover {
+    color: var(--clr-neutral-6);
+    transition-duration: .2s;
+}
+
+.news-card__article i {
+    font-size: .70rem;
+    vertical-align: middle;
+}
+
+
+/**************/
+
+
+/* 12. Brands Banner
+/**************/
+
+.sneakers__brands-banners {
+    background-color: var(--clr-neutral-5);
+}
+
+.brands-banner img {
+    margin: 0 1rem;
+    animation-name: banners-slider;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    position: relative;
+}
+
+@keyframes banners-slider {
+    0% {
+        left: -25%;
+    }
+    50% {
+        left: 20%;
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+
+/**************/
+
+
+/*13. Aside
+/**************/
+
+.sneakers__aside {
+    width: 100%;
+    background-color: var(--clr-neutral-1);
+    padding: 0 25px 2rem 25px;
+    font-family: var(--font-main-title);
+}
+
+.sneakers-aside__header,
+.sneakers-aside__body {
+    padding: 25px 10px 0 10px;
+}
+
+.sneakers-aside__body {
+    padding-right: 50px;
+    font-weight: 200;
+}
+
+.sneakers-aside__header>h3 {
+    color: var(--clr-neutral-3);
+    font-weight: 500;
+    line-height: .7cm;
+    font-size: 1.2rem;
+}
+
+.sneakers-aside__header span {
+    font-size: .95rem;
+    font-weight: 300;
+}
+
+.sneakers-aside__signup-box {
+    display: flex;
+}
+
+.sneakers-aside__signup-box>input {
+    padding: 10px;
+    width: 250px;
+    outline: none;
+}
+
+.sneakers-aside__signup-box>button {
+    border: none;
+    background-color: var(--clr-neutral-6);
+    color: var(--clr-neutral-3);
+    padding: 5px 20px 5px 10px;
+    font-size: .90rem;
+}
+
+.sneakers-aside__signup-box>button:hover {
+    background-color: var(--clr-neutral-4);
+}
+
+.sneakers-aside__header li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.sneakers-aside__header i {
+    color: var(--clr-neutral-3);
+    padding: 10px 12px;
+}
+
+.sneakers-aside__header .fa-facebook {
+    background-color: hsl(220, 44%, 42%);
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.sneakers-aside__header .fa-google-plus {
+    background-color: hsl(5, 77%, 53%);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sneakers-aside__header .fa-twitter {
+    background-color: hsl(207, 84%, 57%);
+}
+
+.sneakers-aside__header .fa-linkedin {
+    background-color: hsl(195, 98%, 33%);
+}
+
+.sneakers-aside__header .fa-instagram {
+    background-color: hsl(207, 42%, 43%);
+}
+
+.sneakers-aside__header i:hover {
+    background-color: var(--clr-neutral-6);
+    transition-duration: .5s;
+}
+
+.sneakers__aside hr {
+    margin: 30px 0 10px 0;
+    border: 1px solid hsla(0, 0%, 0%, 0.336);
+}
+
+.sneakers-aside__body .aside-body__list>.aside-body__item {
+    display: inline-block;
+    color: var(--clr-neutral-3);
+}
+
+.sneakers-aside__body .aside-body__list>.aside-body__item a {
+    color: inherit;
+}
+
+.sneakers-aside__body .logo svg {
+    fill: var(--clr-neutral-3);
+    margin-left: .70rem;
+}
+
+.aside-body__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aside-body__item ul li:first-child {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.aside-body__item ul li+li {
+    line-height: 1cm;
+}
+
+.aside-body__list li+li ul li+li:hover {
+    color: var(--clr-neutral-6);
+    transform: translateX(6%);
+    transition-duration: .35s;
+}
+
+.aside-body__list .aside-body__item+.aside-body__item li+li::before {
+    content: '> ';
+    font-weight: 400;
+}
+
+.aside-body__item i {
+    background-color: hsl(225, 13%, 25%);
+    padding: 10px;
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+.phone i {
+    padding: 10px 12px;
+}
+
+.address i {
+    padding: 10px 14px;
+}
+
+.main {
+    background-image: url(/images/world-map-png-35420.png);
+    background-size: cover;
+}
+
+
+/**************/
+
+
+/* 14. Footer
+/**************/
+
+.sneakers-footer {
+    background-color: hsl(210, 5%, 15%);
+    width: 100%;
+    color: var(--clr-neutral-3);
+    padding: 8px 20px;
+    font-size: .90rem;
+}
+
+.sneakers-footer h4,
+.sneakers-footer ul {
+    vertical-align: middle;
+}
+
+.sneakers-footer ul li {
+    display: inline-block;
+}
+
+
+/**************/
