@@ -1739,7 +1739,7 @@ button:hover {
     .sneakers-aside__signup-box {
         margin: 1rem 0 2.6rem 0;
     }
-    .aside-body__list .aside-body__item:first-child {
+    .aside-body__list {
         flex-wrap: wrap;
     }
     .aside-body__item {
