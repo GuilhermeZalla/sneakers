@@ -249,10 +249,6 @@ button:hover {
     color: var(--clr-neutral-6);
 }
 
-.sneakers__header>.sneakers__list .sneakers__item:first-child {
-    margin-right: 3rem;
-}
-
 .sneakers__header>.sneakers__list .sneakers__item {
     margin: 0 1rem;
 }
