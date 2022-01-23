@@ -201,6 +201,13 @@ button:hover {
         grid-template-columns: repeat(3, 2fr);
         gap: 15px;
     }
+    .products-category__catalog {
+        gap: 28px;
+        overflow: hidden;
+    }
+    .sneakers-aside__header {
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (min-width: 1801px) {
@@ -283,13 +290,13 @@ button:hover {
 /* Mobile responsive */
 
 .sneakers__header>a {
+    display: none;
     position: relative;
     left: 0;
     z-index: 22;
 }
 
 .sneakers__header>a i {
-    display: block;
     font-size: 1.5rem;
     color: var(--clr-neutral-6);
 }
@@ -1051,7 +1058,7 @@ button:hover {
 /**************/
 
 
-/* 6. Certfieds
+/* 6. Certifieds
 
 /**************/
 
@@ -1379,6 +1386,13 @@ button:hover {
 
 .product-category__item:first-child a {
     color: var(--clr-neutral-6);
+}
+
+@media screen and (max-width: 800px) {
+    .product-category__title {
+        padding: 10px 15px;
+        font-size: .90rem;
+    }
 }
 
 
@@ -1715,6 +1729,18 @@ button:hover {
     background-size: cover;
 }
 
+@media screen and (max-width: 800px) {
+    .sneakers-aside__signup-box {
+        margin: 1rem 0 2.6rem 0;
+    }
+    .aside-body__list {
+        flex-wrap: wrap;
+    }
+    .aside-body__item {
+        margin: 1.4rem 0;
+    }
+}
+
 
 /**************/
 
@@ -1737,6 +1763,12 @@ button:hover {
 
 .sneakers-footer ul li {
     display: inline-block;
+}
+
+@media screen and (max-width: 800px) {
+    .sneakers-footer h4 {
+        line-height: .7cm;
+    }
 }
 
 
