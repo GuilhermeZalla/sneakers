@@ -1740,7 +1740,7 @@ button:hover {
         margin: 1rem 0 2.6rem 0;
     }
     .aside-body__list .aside-body__item:first-child {
-        display: block;
+        width: 100%;
     }
     .aside-body__item {
         margin: 1.4rem 0;
