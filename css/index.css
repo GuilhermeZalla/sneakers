@@ -174,7 +174,7 @@ button:hover {
     overflow: hidden;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .sneakers__container,
     .sneakers__aside {
         padding: 20px 20px;
@@ -469,7 +469,7 @@ button:hover {
     color: var(--clr-neutral-6);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .sneakers__header>img {
         margin: auto;
     }
@@ -974,7 +974,7 @@ button:hover {
     background-color: transparent;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .sneakers__page-cover {
         height: 220px;
         padding: 20px 0;
