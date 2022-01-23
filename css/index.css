@@ -1740,7 +1740,7 @@ button:hover {
         margin: 1rem 0 2.6rem 0;
     }
     .aside-body__list {
-        display: unset;
+        flex-wrap: wrap;
     }
     .aside-body__item {
         margin: 1.4rem 0;
