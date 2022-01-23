@@ -12,12 +12,49 @@
 </head>
 
 <body>
+    <aside id="aside-menu" class="sneakers__mobile-menu">
+        <ul>
+            <li>
+                <a href="#">HOME</a>
+                <a id="close-aside-menu" class="close-aside-menu" href="#"><i class="fa fa-close"></i></a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>PAGES</h3>
+                    <span>+</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>WOMEN</h3>
+                    <span>+</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>MEN</h3>
+                    <span>+</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>HANDBAGS</h3>
+                    <span>+</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>SHOES</h3>
+                    <span>+</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
     <div class="sneakers__container">
         <header id="sneakers" class="sneakers__header">
+            <a id="open-aside-menu" href="#"><i class="fa fa-bars"></i></a>
+            <img src="images/logo.svg" alt="Sneakers brand logo icon in svg">
             <ul class="sneakers__list">
-                <li class="sneakers__item">
-                    <img src="images/logo.svg" alt="Sneakers brand logo icon in svg">
-                </li>
                 <li class="sneakers__item">
                     <a class="is-active" href="#" target="_self" rel="next" hreflang="en" aria-label="Contact Sneakers' page">Home</a>
                 </li>
@@ -36,7 +73,10 @@
             </ul>
             <ul class="sneakers__list-user">
                 <li class="sneakers__item">
-                    <a href="#" aria-label="User shop car"><svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill-rule="nonzero"/></svg></a>
+                    <a href="#" aria-label="User shop car">
+                        <img class="shopping-cart" src="images/icon-cart.svg" alt="User's shopping cart icon">
+                        <span id="shop-cart" class="sneakers__shop-cart-item"></span>
+                    </a>
                 </li>
                 <li class="sneakers__item" aria-label="User profile login">
                     <a href="#" aria-label="User login"><img src="/images/image-avatar.png" alt="User login profile picture"></a>
@@ -284,8 +324,9 @@
                         <div class="sneakers__page-cover-caption">
                             <h2 class="sneakers__page-cover-title">
                                 <span class="is-low-case">AT A DISCOUNT</span><br>
-                                <span class="is-high-title">SEASON SALE<br><mark class="is-high-color">UPTO 55% OFF</mark></span><br>
-                                <span class="is-low-case-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, eos aliquid tempora expedita.</span>
+                                <span class="is-high-title">SEASON SALE<br><mark class="is-high-color">UPTO 55% OFF</mark>
+                                </span><br>
+                                <span class="is-low-case-caption">Lorem ipsum dolor sit amet, <mark class="break-row">consectetur</mark> adipisicing elit.</span>
                             </h2>
                             <a class="sneakers__page-cover-link" href="#" aria-label="Buy some items">SHOP NOW</a>
                         </div>
@@ -295,7 +336,7 @@
                         <div class="sneakers__page-cover-caption">
                             <h2 class="sneakers__page-cover-title">
                                 <span class="is-low-case">SPRING SUMMER</span><br>
-                                <span class="is-high-title">WOMEN'S SHOE<br><mark class="is-high-color">BEST COLLECTION</mark></span>
+                                <span class="is-high-title">WOMEN'S SHOE<br><mark class="is-high-color">BEST <mark class="break-row">COLLECTION</mark></mark></span>
                             </h2>
                             <a class="sneakers__page-cover-link" href="#">SHOP NOW</a>
                         </div>
@@ -397,7 +438,7 @@
                             <h3 class="card__title">Product Title Here</h3>
                             <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                             <h3 class="card__price">$125.00</h3>
-                            <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                            <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                         </div>
                         <div class="card">
                             <header class="card__header">
@@ -412,7 +453,7 @@
                             <h3 class="card__title">Product Title Here</h3>
                             <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                             <h3 class="card__price">$175.88</h3>
-                            <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                            <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                         </div>
                         <div class="card">
                             <header class="card__header">
@@ -427,7 +468,7 @@
                             <h3 class="card__title">Product Title Here</h3>
                             <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                             <h3 class="card__price">$299.00</h3>
-                            <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                            <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                         </div>
                         <div class="card">
                             <header class="card__header">
@@ -441,7 +482,7 @@
                             <h3 class="card__title">Product Title Here</h3>
                             <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                             <h3 class="card__price">$188.80&nbsp;&nbsp;<del>$299.00</del></h3>
-                            <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                            <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                         </div>
                         <div class="card">
                             <header class="card__header">
@@ -455,7 +496,7 @@
                             <h3 class="card__title">Product Title Here</h3>
                             <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                             <h3 class="card__price">$125.99</h3>
-                            <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                            <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -463,8 +504,8 @@
                     <header class="trending__header">
                         <h2 class="trending__title">TRENDING PRODUCTS</h2>
                         <div class="trending__box-selector">
-                            <button class="trending__button is-left">&lt;</button>
-                            <button class="trending__button is-right">&gt;</button>
+                            <button type="button" class="trending__button is-left">&lt;</button>
+                            <button type="button" class="trending__button is-right">&gt;</button>
                         </div>
                     </header>
                     <div class="trending__products">
@@ -480,7 +521,7 @@
                             <h3 class="card__title">Product Title Here</h3>
                             <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                             <h3 class="card__price">$125.00</h3>
-                            <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                            <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                         </div>
                         <div class="card">
                             <header class="card__header">
@@ -494,7 +535,7 @@
                             <h3 class="card__title">Product Title Here</h3>
                             <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                             <h3 class="card__price">$175.88</h3>
-                            <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                            <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                         </div>
                         <div class="card">
                             <header class="card__header">
@@ -504,7 +545,7 @@
                             <h3 class="card__title">Product Title Here</h3>
                             <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                             <h3 class="card__price">$299.00&nbsp;&nbsp;<del>$399.00</del></h3>
-                            <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                            <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                         </div>
                         <div class="card">
                             <header class="card__header">
@@ -518,20 +559,20 @@
                             <h3 class="card__title">Product Title Here</h3>
                             <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                             <h3 class="card__price">$188.80&nbsp;&nbsp;<del>$299.00</del></h3>
-                            <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                            <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Sneakers Trending Products -->
             <div class="advertising">
-                <img src="images/ads__img01.png" alt="" width="430">
+                <img src="images/ads__img01.png" alt="Women shoes" width="430">
                 <div class="advertising__middle">
-                    <img src="images/ads__img02.png" alt="" width="180"><br>
-                    <img src="images/ads__img03.png" alt="" width="180"><br>
-                    <img src="images/ads__img05.png" alt="" width="170">
+                    <img src="images/ads__img02.png" alt="Women shoes" width="180"><br>
+                    <img src="images/ads__img03.png" alt="Men shoes" width="180"><br>
+                    <img src="images/ads__img05.png" alt="Men work shoes" width="170">
                 </div>
-                <img src="images/ads__img04.png" alt="" width="470">
+                <img src="images/ads__img04.png" alt="Men shoes" width="470">
             </div>
             <!-- Senakers Advertising -->
             <div class="products-category">
@@ -566,7 +607,7 @@
                         <h3 class="card__title">Product Title Here</h3>
                         <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                         <h3 class="card__price">$125.00</h3>
-                        <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                        <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                     </div>
                     <div class="card">
                         <header class="card__header">
@@ -581,7 +622,7 @@
                         <h3 class="card__title">Product Title Here</h3>
                         <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                         <h3 class="card__price">$299.00&nbsp;&nbsp;<del>$399.00</del></h3>
-                        <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                        <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                     </div>
                     <div class="card">
                         <header class="card__header">
@@ -595,7 +636,7 @@
                         <h3 class="card__title">Product Title Here</h3>
                         <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                         <h3 class="card__price">$125.99</h3>
-                        <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                        <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                     </div>
                     <div class="card">
                         <header class="card__header">
@@ -609,7 +650,7 @@
                         <h3 class="card__title">Product Title Here</h3>
                         <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                         <h3 class="card__price">$125.99</h3>
-                        <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                        <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                     </div>
                     <div class="card">
                         <header class="card__header">
@@ -623,7 +664,7 @@
                         <h3 class="card__title">Product Title Here</h3>
                         <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                         <h3 class="card__price">$188.80&nbsp;&nbsp;<del>$299.00</del></h3>
-                        <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                        <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                     </div>
                     <div class="card">
                         <header class="card__header">
@@ -637,7 +678,7 @@
                         <h3 class="card__title">Product Title Here</h3>
                         <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                         <h3 class="card__price">$125.99</h3>
-                        <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                        <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                     </div>
                     <div class="card">
                         <header class="card__header">
@@ -651,7 +692,7 @@
                         <h3 class="card__title">Product Title Here</h3>
                         <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                         <h3 class="card__price">$188.80&nbsp;&nbsp;<del>$299.00</del></h3>
-                        <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                        <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                     </div>
                     <div class="card">
                         <header class="card__header">
@@ -665,7 +706,7 @@
                         <h3 class="card__title">Product Title Here</h3>
                         <span><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
                         <h3 class="card__price">$188.80&nbsp;&nbsp;<del>$299.00</del></h3>
-                        <button class="card__button"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
+                        <button type="button" class="card__button" name="add-cart"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp;ADD TO CART</button>
                     </div>
                 </div>
                 <!-- Sneakers Prodcuts Categories -->
@@ -721,6 +762,8 @@
                                 <i class="fa fa-chevron-right"></i>&nbsp;<a href="#" aria-label="Read more about the article">Read More</a>
                             </article>
                         </div>
+                    </div>
+                    <div class="news__ads">
                         <a href="#"><img src="images/ads__img06.png" alt="Formal shoes for men"></a>
                         <a href="#"><img src="images/ads__img07.png" alt="Fashion shoes for women"></a>
                         <a href="#"><img src="images/ads__img08.png" alt="Sandals for kids"></a>
@@ -751,7 +794,7 @@
             <h3>SIGN UP FOR NEWSLETTER <br><span>Get the latest deals and special offer</span></h3>
             <div class="sneakers-aside__signup-box">
                 <input type="text" placeholder="Enter your Email">
-                <button><i class="fa fa-envelope"></i>SUBSCRIBE</button>
+                <button type="button"><i class="fa fa-envelope"></i>SUBSCRIBE</button>
             </div>
             <ul class="aside__list">
                 <li class="aside__item">
@@ -858,5 +901,11 @@
     </footer>
     <script src="js/script.js"></script>
 </body>
+
+</html>
+
+</html>
+
+</html>
 
 </html>
