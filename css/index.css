@@ -290,6 +290,11 @@ button:hover {
     right: 9.5%;
 }
 
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .sneakers__list-user>.sneakers__item {
+        margin-right: 1rem;
+    }
+}
 
 /* Mobile responsive */
 
