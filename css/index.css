@@ -174,7 +174,7 @@ button:hover {
     overflow: hidden;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 599px) {
     .sneakers__container,
     .sneakers__aside {
         padding: 20px 20px;
@@ -184,7 +184,7 @@ button:hover {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
     .sneakers__certifieds {
         flex-wrap: wrap;
     }
@@ -210,7 +210,7 @@ button:hover {
     }
 }
 
-@media screen and (min-width: 1801px) {
+@media screen and (min-width: 1800px) {
     .sneakers__container,
     .sneakers__aside {
         padding-left: 390px;
@@ -469,7 +469,7 @@ button:hover {
     color: var(--clr-neutral-6);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 599px) {
     .sneakers__header>img {
         margin: auto;
     }
@@ -974,7 +974,7 @@ button:hover {
     background-color: transparent;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 599px) {
     .sneakers__page-cover {
         height: 220px;
         padding: 20px 0;
@@ -1109,7 +1109,7 @@ button:hover {
     font-weight: normal;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
     .sneakers__certifieds div {
         display: unset;
         padding: 10px 10px;
@@ -1318,7 +1318,7 @@ button:hover {
     background-color: var(--clr-neutral-7);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
     .card {
         width: 207px;
         height: 380px;
@@ -1342,7 +1342,7 @@ button:hover {
     height: 150px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
     .advertising {
         margin-bottom: 4rem;
         height: 245px;
@@ -1388,7 +1388,7 @@ button:hover {
     color: var(--clr-neutral-6);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
     .product-category__title {
         padding: 10px 15px;
         font-size: .90rem;
@@ -1406,7 +1406,7 @@ button:hover {
     height: 230px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
     .banners {
         height: 160px;
     }
@@ -1507,7 +1507,7 @@ button:hover {
     vertical-align: middle;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
     .news {
         margin-top: 0;
     }
@@ -1729,7 +1729,7 @@ button:hover {
     background-size: cover;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
     .sneakers-aside__signup-box {
         margin: 1rem 0 2.6rem 0;
     }
@@ -1765,7 +1765,7 @@ button:hover {
     display: inline-block;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
     .sneakers-footer h4 {
         line-height: .7cm;
     }
