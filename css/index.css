@@ -1515,6 +1515,10 @@ button:hover {
     .news {
         margin-top: 0;
     }
+    
+    .news__body{
+        overflow-x: scroll;
+    }
     .news__ads {
         text-align: center;
         margin: 10px 0;
