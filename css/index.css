@@ -294,6 +294,12 @@ button:hover {
     .sneakers__list-user>.sneakers__item {
         margin-right: 1rem;
     }
+    .sneakers__list-user>.sneakers__item .shopping-cart {
+        width: 26px;
+    }
+    .sneakers__header .sneakers__list-user img {
+        width: 38px;
+    }
 }
 
 /* Mobile responsive */
