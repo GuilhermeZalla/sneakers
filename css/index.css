@@ -185,6 +185,10 @@ button:hover {
 }
 
 @media screen and (min-width: 600px) and (max-width: 900px) {
+    .sneakers__container,
+    .sneakers__aside {
+        padding: 20px 30px;
+    }
     .sneakers__certifieds {
         flex-wrap: wrap;
     }
@@ -192,7 +196,7 @@ button:hover {
         flex-wrap: wrap;
     }
     .trending__products {
-        width: 445px;
+        width: 835px;
         height: 450px;
     }
     .news__body {
@@ -1345,7 +1349,7 @@ button:hover {
 @media screen and (min-width: 600px) and (max-width: 900px) {
     .advertising {
         margin-bottom: 4rem;
-        height: 245px;
+        height: 350px;
     }
     .advertising__middle>img {
         display: none;
@@ -1408,11 +1412,11 @@ button:hover {
 
 @media screen and (min-width: 600px) and (max-width: 900px) {
     .banners {
-        height: 160px;
+        height: 200px;
     }
     .banners img {
-        width: 255px;
-        height: 110px;
+        width: 410px;
+        height: 160px;
     }
 }
 
@@ -1516,14 +1520,12 @@ button:hover {
         margin: 10px 0;
     }
     .news__ads>a img {
-        width: 90%;
+        width: 70%;
+        height: 250px;
     }
     .news-card__box {
-        width: 233px;
+        width: 268px;
         height: 395px;
-    }
-    .news__body {
-        overflow-y: hidden;
     }
 }
 
