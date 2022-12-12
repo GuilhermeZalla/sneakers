@@ -1,0 +1,21 @@
+/* Import Colors */
+
+@import './variables/colors/colors.scss';
+
+/* Import Fonts */
+
+@import './variables/fonts/fonts.scss';
+
+/* Import React Components */
+
+@import './components/common/header/header.scss';
+@import './components/common/header/item/item.scss';
+@import './components/layout/dashboard/dashboard.scss';
+@import './components/layout/home/home.scss';
+@import './components/layout/userData/userData.scss';
+@import './components/layout/purchases/purchases.scss';
+@import './components/layout/wishlist/wishlist.scss';
+@import './components/home/home.scss';
+@import './components/product-overview/productOverview.scss';
+@import './components/payment/payment.scss';
+@import './components/layout/login/login.scss';

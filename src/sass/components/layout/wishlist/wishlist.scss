@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+.wishlist {
+    padding: 0 20px;
+
+    &>h1 {
+        @include flexbox(flex, none, center, none, 15px);
+        margin: 10px 0 40px 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+
+        svg {
+            color: $clr-primary;
+            font-size: 1.8rem;
+        }
+    }
+
+    .empty-wishlist {
+        text-align: center;
+
+        h2 {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        &>a {
+            background-color: $clr-primary;
+            color: $clr-neutral-4;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            padding: 10px 40px;
+            border-radius: 5px;
+            transition: all 200ms ease-in-out;
+
+            &:active {
+                transform: scale(97%);
+            }
+        }
+    }
+
+    &>ul {
+        @include flexbox(flex, none, none, column, 35px);
+        max-height: 550px;
+        overflow: scroll;
+        overflow-x: hidden;
+        padding: 10px 0;
+
+        .item-container {
+            box-shadow: 0px 1px 7px 0px #1d202538;
+            background-color: $clr-element-bg;
+
+            &>ul {
+                @include flexbox(flex, space-between, center, row, 0);
+                padding: 35px 20px 35px 30px;
+
+                li {
+                    figure {
+                        max-width: 162px;
+
+                        img {
+                            max-width: 100%;
+                            min-width: 100%;
+                            max-height: 100%;
+                            min-height: 100%;
+                            object-fit: cover;
+                            display: block;
+                        }
+                    }
+
+                    &:nth-last-child(3) {
+                        font-weight: 700;
+                        width: 200px;
+                    }
+
+                    &:nth-last-child(2) {
+                        text-align: center;
+                        width: 100px;
+                        color: $clr-primary;
+                        font-weight: 700;
+                        font-size: 1.6rem;
+                    }
+
+                    &:last-child {
+                        @include flexbox(flex, flex-start, center, row, 0);
+
+                        a {
+                            @include flexbox(flex, flex-start, center, row, 10px);
+                            background-color: $clr-primary;
+                            color: $clr-neutral-4;
+                            font-weight: 700;
+                            font-size: 1.2rem;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            transition: all 200ms ease-in-out;
+
+                            &>svg {
+                                font-size: 1.4rem;
+                            }
+
+                            &:active {
+                                transform: scale(97%);
+                            }
+                        }
+
+                        button {
+                            svg {
+                                color: #808080;
+                                font-size: 2.4rem;
+                                margin-left: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .wishlist {
+
+        &>ul {
+            .item-container {
+                &>ul {
+                    @include flexbox(flex, center, center, column, 30px);
+                    padding: 35px 0;
+
+                    li {
+                        h2 {
+                            text-align: center;
+                        }
+
+                        &:nth-last-child(2) {
+                            width: 100%;
+                            font-size: 2rem;
+                        }
+
+                        &:last-child {
+                            a {
+                                font-size: .90rem;
+                                text-align: center;
+
+                                &>svg {
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 991px) {
+    .wishlist {
+
+        &>ul {
+            .item-container {
+                &>ul {
+                    @include flexbox(flex, space-between, center, row, 10px);
+                    padding: 35px 15px 35px 15px;
+
+                    li {
+                        &:nth-last-child(2) {
+                            width: 150px;
+                            font-size: 1.8rem;
+                        }
+
+                        &:last-child {
+                            a {
+                                font-size: .90rem;
+                                line-height: .5cm;
+                                text-align: center;
+
+                                &>svg {
+                                    font-size: 1.7rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .wishlist {
+        padding: 0;
+    }
+}

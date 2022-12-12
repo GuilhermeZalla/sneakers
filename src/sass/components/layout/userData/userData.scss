@@ -1,0 +1,469 @@
+@charset "UTF-8";
+
+.user-account {
+    display: none;
+}
+
+.password-change {
+    display: none;
+}
+
+form {
+    background-color: $clr-element-bg;
+    width: 100%;
+    height: 680px;
+    padding: 30px 25px;
+    position: relative;
+
+    legend {
+        @include flexbox(flex, none, center, none, 5px);
+        position: relative;
+        font-size: 1rem;
+        font-weight: 700;
+        width: 100%;
+        margin-bottom: 25px;
+
+        svg {
+            color: $clr-primary;
+            font-size: 1.8rem;
+        }
+
+        &>button {
+            position: absolute;
+            right: 0;
+            background: linear-gradient(to right, $clr-primary 50%, $clr-element-bg 50%);
+            background-size: 200% 100%;
+            background-position: bottom right;
+            transition: all .6s ease-out;
+            color: $clr-primary;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: .70rem;
+            padding: 8px 15px;
+            border: 1px solid $clr-primary;
+
+            &:hover {
+                border: none;
+                background-position: bottom left;
+                color: $clr-element-bg;
+            }
+        }
+    }
+
+    fieldset {
+        @include flexbox(flex, none, none, column, 18px);
+    }
+
+    p {
+        @include flexbox(flex, none, none, column, 8px);
+    }
+
+    .gender {
+        &>label {
+            margin-bottom: 8px;
+        }
+
+        & input {
+            outline: none;
+        }
+
+        div {
+            @include flexbox(flex, none, none, row, 5px);
+
+            &>label {
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    input {
+        &[name='save'] {
+            border: none;
+            outline: none;
+            background-color: $clr-primary;
+            color: $clr-neutral-4;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 120px;
+            width: 200px;
+            align-self: flex-end;
+            transition: all 200ms ease-in-out;
+
+            &:active {
+                transform: scale(97%);
+            }
+        }
+    }
+}
+
+.readonly {
+    background-color: rgba(80, 77, 77, 0.185);
+    color: $clr-neutral-1;
+
+    &:focus {
+        outline: 1px solid $clr-neutral-2;
+    }
+}
+
+.data {
+    padding-right: 20px;
+
+    &>h2 {
+        @include flexbox(flex, none, center, none, 15px);
+        margin: 10px 0 40px 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+
+        svg {
+            color: $clr-primary;
+            font-size: 1.8rem;
+        }
+    }
+
+    &>div {
+        @include flexbox(flex, flex-start, flex-start, row, 40px);
+        flex-basis: 20%;
+    }
+
+    .addresses {
+        background-color: $clr-element-bg;
+        flex-basis: 80%;
+        height: 680px;
+        padding-right: 10px;
+
+        h2 {
+            @include flexbox(flex, none, center, none, 5px);
+            padding: 30px 25px 10px 25px;
+            position: relative;
+            font-size: 1rem;
+            font-weight: 700;
+            width: 100%;
+            margin-bottom: 25px;
+
+            svg {
+                color: $clr-primary;
+                font-size: 1.8rem;
+            }
+        }
+
+        .addresses__list {
+            @include flexbox(flex, none, none, column, 15px);
+            overflow: scroll;
+            overflow-x: hidden;
+            height: 500px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+
+            .addresses__item-default{
+                background-color: $clr-secondary;
+            }
+
+            .addresses__item, .addresses__item-default{
+                border-left: 4px solid #ff0000;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+                padding: 15px 20px;
+
+                .addresses__modal{
+                    @include flexbox(none, center, center, none, none);
+                        background-color: rgba(0, 0, 0, 0.678);
+                        position: fixed;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        z-index: 10;
+                    &>.addresses__article{
+                        @include flexbox(inherit, center, center, column, 30px);
+                        background-color: $clr-element-bg;
+                        border-radius: 8px;
+                        max-width: 430px;
+                        padding: 45px;
+                        & > h2{
+                            @include flexbox(flex, center, center, row, 0);
+                            padding: 0;
+                            margin: 0;
+                            font-size: 1.4rem;
+                        }
+                        & > span{
+                            @include flexbox(flex, center, center, row, 30px);
+                            &>button{
+                                border: none;
+                                outline: none;
+                                padding: 10px 40px;
+                                border-radius: 8px;
+                                background-color: $clr-primary;
+                                color: $clr-neutral-4;
+                                font-weight: 700;
+                                font-size: 1rem;
+                                width: 100%;
+                                align-self: flex-end;
+                                transition: all 200ms ease-in-out;
+
+                                &:active {
+                                    transform: scale(97%);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                ul {
+                    @include flexbox(flex, none, none, column, 8px);
+
+                    li {
+                        &:first-child {
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                        }
+
+                        &:not(:first-child) {
+                            font-size: .90rem;
+                            line-height: .5cm;
+                        }
+
+                        &:last-child {
+                            text-align: right;
+
+                            &>button {
+                                font-weight: 700;
+                                font-size: .75rem;
+                            }
+                        }
+
+                        &.default {
+                            &>button {
+                                color: $clr-neutral-1;
+
+                                &:last-child {
+                                    color: $clr-primary;
+                                }
+                            }
+                        }
+
+                        & span {
+                            color: $clr-primary;
+                            font-size: .90rem;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+
+        &>button {
+            @include flexbox(flex, center, center, none, 10px);
+            border: none;
+            outline: none;
+            background-color: $clr-primary;
+            color: $clr-neutral-4;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            margin: 0 25px 0 0;
+            width: 230px;
+            float: right;
+            border-radius: 5px;
+            align-self: flex-end;
+            transition: all 200ms ease-in-out;
+
+            & svg {
+                color: $clr-neutral-4;
+                font-size: 1.6rem;
+            }
+
+            &:active {
+                transform: scale(97%);
+            }
+        }
+    }
+}
+
+.modal-password,
+.modal-address {
+    @include flexbox(none, center, center, none, none);
+    background-color: rgba(0, 0, 0, 0.678);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    .wrong-password {
+        color: $clr-warning;
+        font-weight: 700;
+        font-size: .95rem;
+        text-align: right;
+        display: none;
+    }
+
+    &>form {
+        background-color: $clr-element-bg;
+        border-radius: 5px;
+        padding: 20px;
+        max-width: 500px;
+        height: initial;
+
+        input {
+            &[name='save'] {
+                margin-top: 20px;
+            }
+        }
+
+        &>fieldset {
+            .form-subtitle {
+                font-size: 1.1rem;
+            }
+
+            legend {
+                &>button {
+                    background: none;
+                    background-size: none;
+                    background-position: none;
+                    transition: none;
+                    padding: 0;
+                    border: none;
+                    transition: all 200ms ease-in-out;
+
+                    &:active {
+                        transform: scale(95%);
+                    }
+                }
+            }
+
+            & .number,
+            .city {
+                @include flexbox(flex, space-between, flex-start, row, 15px);
+
+                &>input {
+                    width: 100%;
+
+                    &:first-child {
+                        flex-basis: 80%;
+                    }
+
+                    &:last-child {
+                        flex-basis: 20%;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 990px){
+    .modal-password,
+    .modal-address{
+        &>form{
+            margin: 0 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    form {
+        legend {
+            @include flexbox(flex, none, center, none, 5px);
+            flex-wrap: wrap;
+
+            &>button {
+                position: initial;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .data {
+        padding-right: 20px;
+        .addresses {
+            .addresses__list {
+
+                .addresses__item, .addresses__item-default{
+
+                    ul {
+
+                        li {
+
+                            &:last-child {
+                                &>button {
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 780px){
+
+    form {
+        padding: 30px 25px;
+    }
+
+    .data {
+        padding-right: 0;
+        &>div {
+            @include flexbox(flex, flex-start, flex-start, column, 40px);
+            flex-basis: initial;
+        }
+        .addresses{
+            width: 100%;
+            padding-bottom: 30px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 781px) and (max-width: 991px){
+    .data{
+        &>div{
+                &>form{
+                    height: 710px;
+                    position: relative;
+                    input {
+                        &[name='save'] {
+                            position: absolute;
+                            bottom: -190px;
+                        }
+                    }
+                }
+        }
+        .addresses {
+            .addresses__list {
+
+                .addresses__item, .addresses__item-default{
+
+                    ul {
+
+                        li {
+
+                            &:last-child {
+                                &>button {
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 992px){
+    form {
+
+        input {
+            &[name='save'] {
+                bottom: -190px;
+            }
+        }
+    }
+}

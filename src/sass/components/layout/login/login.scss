@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+.main-login {
+    @include flexbox(flex, flex-start, flex-start, row, 60px);
+    background-color: $clr-element-bg;
+    box-shadow: -3px 7px 20px 0 #1d202538;
+    margin: 5% 20%;
+
+    form {
+        background-color: transparent;
+        padding: 50px;
+
+        p {
+            width: 100%;
+            &:not(.form__fieldset) {
+                position: relative;
+            }
+
+            input{
+                &.login{
+                        padding-left: 45px;
+                }
+            }
+
+            button {
+                background-color: $clr-primary;
+                margin-top: 10px;
+                border: none;
+                border-radius: 8px;
+                padding: 12px;
+                font-weight: 700;
+                font-size: 1rem;
+                color: $clr-element-bg;
+                transition: all 200ms ease-in-out;
+
+                &:active {
+                    transform: scale(95%);
+                }
+            }
+            &.form__paragraph{
+                margin-bottom: 10px;
+            }
+            &.error{
+                font-size: .90rem;
+                display: initial;
+                visibility: hidden;
+            }
+        }
+        &:first-child{
+           position: relative;
+            &::after{
+                content: 'OR';
+                position: absolute;
+                right: -50px;
+                top: 55%;
+                color: $clr-primary;
+                font-weight: 700;
+                font-size: 1.4rem;
+            }
+            &>fieldset{
+               &>div{
+                @include flexbox(flex, none, none, column, 20px);
+                margin-top: 20px;
+               }
+               button{
+                &[name='signin']{
+                    position: absolute;
+                    bottom: -50px;
+                    left: 0;
+                    right: 0;
+                }
+               }
+            }
+        }
+        &:last-child{
+            @include flexbox(flex, none, none, column, 20px);
+        }
+    }
+
+    .form__legend {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+}
