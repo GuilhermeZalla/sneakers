@@ -1,276 +1,70 @@
-# Ecommerce Website
+# Getting Started with Create React App
 
-A simple Ecommerce website built with MERN stack. MongoDB used for the backend with Nodejs and Express to store user data for authentication, purchases, wishlist and user data.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-React Router used for navigation. 
+## Available Scripts
 
+In the project directory, you can run:
 
-## Home Page
+### `npm start`
 
-![App Screenshot](https://i.imgur.com/KOcjwQO.png)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-![App Screenshot](https://i.imgur.com/omZbkqG.png)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-> User can favorite a product to wishlist by clicking on a empty heart.
+### `npm test`
 
-**Favorite:**
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```
-{
-    name: {
-        type: String,
-        required: true
-    },
-    productId: {
-        type: Number,
-        required: true
-    },
-    price: {
-        type: Number,
-        required: true
-    },
-    rank: {
-        type: Number,
-        required: true
-    }
-}
-```
+### `npm run build`
 
-## Product Page
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-![App Screenshot](https://i.imgur.com/UAVW6h8.png)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-> Clicking on add to cart will add the current item/product to the shopping cart.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-**Shopping Cart:**
+### `npm run eject`
 
-```
-{
-    name: {
-        type: String,
-        required: true
-    },
-    productId: {
-        type: Number,
-        required: true
-    },
-    price: {
-        type: Number,
-        required: true
-    },
-    quant: {
-        type: Number,
-        required: true
-    }
-}
-```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Login/Signup Page
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-![App Screenshot](https://i.imgur.com/FJILPrg.png)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-![App Screenshot](https://i.imgur.com/VhTqHhO.png)
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-> User can signup by clicking **Sign Up** and opening the sing up tab
-> If the user already has an account, it's possible to just login by 
-> the login tab and then **Sign In**.
+## Learn More
 
-**User:**
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```
-{
-    useremail: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    phone: {
-        type: Number,
-        required: true,
-        unique: true
-    },
-    full_name: {
-        type: String,
-        required: true
-    },
-    birthday: {
-        type: String,
-        required: true
-    },
-    second_contact: {
-        type: Number,
-        required: false
-    },
-    gender: {
-        type: String,
-        required: true
-    },
-    logged: {
-        type: Boolean,
-        default: false,
-        required: false
-    }
-}
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Checkout Pages
+### Code Splitting
 
-![App Screenshot](https://i.imgur.com/S6MXCqS.png)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-![App Screenshot](https://i.imgur.com/kI39LOn.png)
+### Analyzing the Bundle Size
 
-![App Screenshot](https://i.imgur.com/MR4Qv39.png)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-![App Screenshot](https://i.imgur.com/gbi1xRJ.png)
+### Making a Progressive Web App
 
-> After a purchase, clicking on **Back to home**, **Go to dashboard** or **See your purchase(s)**,
-> the current purchase will be add to the user's history purchases and will be available to overview in the dashboard,
-> which is only accessible in a exist and logged account.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-**Purchase:**
+### Advanced Configuration
 
-```
-{
-    purchase_number: {
-        type: Number,
-        required: true
-    },
-    date: {
-        type: String,
-        required: true
-    },
-    payment: {
-        type: String,
-        required: true
-    },
-    price: {
-        type: String,
-        required: true
-    },
-    buyout_type: {
-        type: String,
-        required: true
-    },
-    address: {
-        type: String,
-        required: true
-    },
-    name: {
-        type: String,
-        required: true
-    },
-    quantity: {
-        type: Number,
-        required: true
-    },
-    shipping: {
-        type: String,
-        required: true
-    },
-    shipping_price: {
-        type: String,
-        required: true
-    },
-    status: {
-        type: String,
-        required: true
-    },
-    postal: {
-        type: Number,
-        required: true
-    },
-    street_number: {
-        type: Number,
-        required: true
-    },
-    district: {
-        type: String,
-        required: true
-    },
-    city: {
-        type: String,
-        required: true
-    },
-    state: {
-        type: String,
-        required: true
-    }
-}
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-## User Dashboard
-![](https://i.imgur.com/oJfE1Ee.gif)
+### Deployment
 
-> The dashboard is only accessible in a exist and logged account.
-> In the dashboard is possible to visualize user's data information,
-> purchase's history and wishlist. It's possible to update account's 
-> information in the dashboard and add a new address or remove and edit,
-> set an address as default and much more.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-**Address:**
-```
-{
-    postal: {
-        type: Number,
-        required: true
-    },
-    type: {
-        type: String,
-        required: true
-    },
-    street_address: {
-        type: String,
-        required: true
-    },
-    street_number: {
-        type: Number,
-        required: true
-    },
-    street_address_2: {
-        type: String,
-        required: true
-    },
-    reference: {
-        type: String,
-        required: false
-    },
-    district: {
-        type: String,
-        required: true
-    },
-    city: {
-        type: String,
-        required: true
-    },
-    state: {
-        type: String,
-        required: true
-    },
-    default: {
-        type: Boolean,
-        default: false
-    }
-}
-```
+### `npm run build` fails to minify
 
-## Stack used
-
-**Front-end:** Javascript, React, React Router, SASS
-
-**Back-end:** NodeJs, ExpressJs, Mongoose
-
-**Database**: MongoDB
-
-
-## Possible Future Additions
-
-* Third Party Payment Integration
-* Third Party Auth like Google, Facebook, Twitter, etc
-* Recaptcha for security
-* Recommendations/Frequently Bought Together
-* Forgot Password
-* For-You-Page based on favorites and previous orders
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
